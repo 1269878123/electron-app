@@ -1,0 +1,6 @@
+@import 'tippy.js/dist/tippy.css';
+@import 'tippy.js/dist/svg-arrow.css';
+@import 'tippy.js/animations/shift-away.css';
+.i-tippy {
+	@apply flex w-4 h-4 rounded-full items-center justify-center bg-slate-100 cursor-pointer duration-300 hover:bg-slate-700 hover:text-white;
+}

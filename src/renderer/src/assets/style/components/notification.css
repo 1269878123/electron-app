@@ -1,0 +1,41 @@
+@import "toastify-js/src/toastify.css";
+
+.toastify {
+    @apply rounded bg-none font-medium shadow-none bg-slate-200 text-slate-800
+}
+
+.toastify.html{
+    @apply px-5 pb-9 pt-4 cursor-auto bg-transparent shadow-none border-none
+}
+
+.toastify.primary{
+    @apply bg-primary
+}
+
+.toastify.secondary{
+    @apply bg-pink-500 text-white
+}
+
+.toastify.info{
+    @apply bg-info text-white
+}
+
+.toastify.warning{
+    @apply bg-orange-500 text-white
+}
+
+.toastify.success{
+    @apply bg-success text-white
+}
+
+.toastify.error{
+    @apply bg-error text-white
+}
+
+.toastify.light{
+    @apply bg-slate-200 text-navy-800
+}
+
+.toastify.dark{
+    @apply bg-navy-600 text-slate-200
+}

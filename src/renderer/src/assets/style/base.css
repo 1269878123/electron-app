@@ -1,0 +1,148 @@
+/* Variables */
+:root {
+    --main-sidebar-width: 5rem;
+    --main-topbar-height: 3.6rem;
+}
+
+/* main */
+html {
+    @apply h-full overflow-x-hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+}
+
+[x-cloak],
+[data-x-cloak] {
+    @apply  !hidden;
+}
+
+body {
+    @apply text-sm leading-none select-none text-slate-600 antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: PingFang SC,Arial,Microsoft YaHei,sans-serif;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.text-xxs {
+    font-size: 11px !important;
+    line-height: .75rem;
+}
+
+.z-1{
+  z-index: 1;
+}
+
+.z-2{
+  z-index: 2;
+}
+
+/* 定义滚动条样式 */
+::-webkit-scrollbar {
+    @apply w-1
+}
+
+::-webkit-scrollbar-track {}
+
+::-webkit-scrollbar-thumb {
+    @apply rounded-md bg-slate-100
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-150
+}
+
+.app-drag {
+    -webkit-app-region: drag;
+}
+.tooltip-question {
+    @apply flex w-4 h-4 text-xxs text-slate-400 rounded-full items-center justify-center bg-slate-100 hover:bg-slate-200 cursor-pointer
+}
+
+/* app-preloader */
+.app-preloader .app-preloader-inner::after,
+.app-preloader .app-preloader-inner::before {
+    @apply absolute h-full w-full rounded-full bg-slate-300/[.25] content-[''];
+    animation: spinner-grow 3s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite;
+}
+
+.app-preloader .app-preloader-inner::after {
+    animation-delay: -1.5s;
+}
+
+/* is-scrollbar-hidden */
+.is-scrollbar-hidden {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.is-scrollbar-hidden::-webkit-scrollbar {
+    @apply hidden;
+}
+
+/* Main */
+.main {
+    @apply border border-slate-300 rounded-[0.6rem] bg-slate-100 overflow-hidden
+}
+
+/* Header */
+nav.header {
+    @apply fixed left-[1px] z-20 flex h-[var(--main-topbar-height)] w-[calc(100%-2px)] rounded-[0.8rem];
+}
+
+nav.header .header-container {
+    @apply pr-3 pl-[var(--main-sidebar-width)] transition-[padding,width] duration-[.25s] rounded-[0.8rem];
+}
+
+/* Main content */
+.main-content {
+    @apply flex shadow-sm h-[calc(100vh-var(--main-topbar-height)-2px)] w-[calc(100vw-var(--main-sidebar-width)-2px)] ml-[var(--main-sidebar-width)] mt-[var(--main-topbar-height)] border-l border-t border-slate-200/60 rounded-tl-lg bg-white overflow-hidden;
+}
+
+/*Sidebar*/
+.sidebar {
+    @apply fixed left-[1px] top-[1px] z-30 h-[calc(100%-2px)];
+}
+.sidebar-logo {
+    @apply flex items-center justify-center;
+}
+.sidebar-user {
+    @apply h-[calc(100vh-6.5rem)] w-[var(--main-sidebar-width)] overflow-visible flex flex-col space-y-2 px-2 pb-2;
+}
+.sidebar-user .active .relative.cursor-pointer:before {
+    content: '';
+    @apply absolute right-[-.72rem] top-[calc(50%-.32rem)] h-2 w-2 bg-white border-l border-t border-slate-200/60 transform -rotate-45;
+}
+
+/* Content sidebar*/
+.content-sidebar {
+    @apply h-[calc(100vh-var(--main-topbar-height)-1px)] bg-slate-50/50 border-slate-200/60;
+}
+.content-sidebar-panle {
+    @apply relative h-full overflow-y-auto flex flex-col space-y-2 p-2;
+}
+.content-sidebar-panle.hastop {
+    @apply h-[calc(100%-3rem)];
+}
+.content-sidebar-panle .bg-slate-150 {
+    @apply opacity-100;
+}
+.content-h {
+    @apply h-[calc(100vh-var(--main-topbar-height)-2px)]
+}
+.content-t {
+    @apply top-[calc(var(--main-topbar-height)+1px)]
+}
+
+/* Chatgpt */
+.chatgpt-text ul, .chatgpt-text ol{
+    @apply mt-2
+}
+.chatgpt-text li{
+    @apply list-disc list-inside
+}

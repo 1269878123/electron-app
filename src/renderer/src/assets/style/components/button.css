@@ -1,0 +1,11 @@
+.btn {
+	@apply inline-flex cursor-pointer items-center justify-center rounded-md px-3 py-2.5 leading-none
+   text-center tracking-wide outline-none transition-all duration-300
+   focus:outline-none disabled:pointer-events-none;
+}
+.btn:disabled {
+	@apply rounded-md px-3 py-2.5 font-semibold shadow-sm ring-1 ring-inset opacity-40 pointer-events-none;
+}
+.btn-primary {
+	@apply rounded-md px-3 py-2.5 font-semibold shadow-sm ring-1 ring-inset bg-navy-650 text-white hover:bg-navy-650 focus-visible:outline-navy-650;
+}
